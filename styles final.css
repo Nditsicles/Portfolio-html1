@@ -1,0 +1,555 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #45402A 24%, #7F5727 87%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    width: 1280px;
+    height: 1080px;
+    margin: 0 auto;
+    overflow: fixed;
+}
+
+:root {
+    --header-height: 764px;
+}
+
+/* Header image that fills top area and shows its bottom portion */
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1298px;
+    height: var(--header-height);
+    object-fit: cover;         /* cover the area without stretching */
+    object-position: bottom;   /* keep the bottom of the image visible */
+    z-index: 1;
+}
+
+/* Navigation Styles */
+.navbar {
+    position: absolute;
+    left: 0px;
+    top:105px;
+    background-color: #000;
+    padding: 10px;
+    width: 1280px;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.navbar li a {
+    color: #7F5727;
+    font-family: "Inria Serif", serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Homepage positioning */
+body.homepage .navbar {
+    position: absolute;
+    left: 0px;
+    top: 764px; /* Position below the image */
+}
+
+/* Rest of your styles remain the same */
+.image-overlay {
+    position: absolute;
+    right: 136px;
+    top: 126px;
+    width: 571px;
+    height: 435px;
+    color: white;
+    font-family: "Inria Serif", serif;
+    text-align: right;
+    z-index: 100;
+}
+
+.overlay-title {
+    font-size: 79px;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.overlay-subtitle {
+    font-size: 52px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.overlay-subtitle ins {
+    text-decoration: underline;
+}
+
+.overlay-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1280px;
+    background-color: #000;
+    color: #7F5727;
+    padding: 15px 0;
+    font-family: "Inria Serif", serif;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.initials {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7F5727;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-placeholder {
+    width: 24px;
+    height: 24px;
+    background-color: #7F5727;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+body.homepage .banner-image {
+    display: none;
+}
+
+/* --- TOP BANNER (For non-home pages) --- */
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    background-image: url('/Users/user/Desktop/Screenshot 2025-11-25 at 12.11.43.png'); /* Ensure this path is correct */
+    background-size: cover;
+    z-index: 50;
+}
+
+/* --- ABOUT ME PAGE STYLES --- */
+.about-title {
+    position: absolute;
+    top: 170px;
+    left: 70px;
+    font-size: 64px;
+    font-family: "Italiana", serif;
+    color: #C0A062; /* Gold color */
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+/* Image Styles */
+.about-image {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.left-image { 
+    width: 190px;
+    height: 318px;
+    border-radius: 100px;
+    margin-top: 325px; 
+    margin-left: 90px;
+}
+
+.right-image {
+    width: 301px;
+    height: 474px;
+    border-radius: 100px;
+    margin-top: -100px;
+    margin-left: 600px;
+}
+
+
+.about-center-text {
+    position: absolute;
+    bottom: 60px;
+    color: #ffff;
+    left: 90px;
+    right: 90px;
+    text-align: center;
+}
+
+.about-keywords {
+    position:absolute;
+    top:275px;
+    margin-left:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.about-keywords span {
+    font-size: 71px;
+    font-family:  "Italiana", serif;
+    font-weight: bold;
+    color: #C0A062; /* Gold color */
+    line-height: 1.45;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.about-description {
+    margin-top:40px;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+/* ===== RESUME PAGE STYLES ===== */
+.resume-side-text {
+    position: absolute;
+    top: 300px;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 60px;
+    color: #7F5727; /* Brown text matches background somewhat */
+    opacity: 0.6;
+    writing-mode: vertical-rl; /* Makes text vertical */
+    text-orientation: upright; /* Keeps letters upright */
+    letter-spacing: 20px;
+}
+
+.resume-text-left { left: 100px; }
+.resume-text-right { right: 100px; }
+
+.resume-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1280px;
+    height: 800px;
+    padding-top: 200px;
+}
+
+.resume-image-container {
+    width: 554px;
+    height: 721px;
+    background-color: #f8f8f8;
+    border: 3px dashed #7F5727;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    display: none; /* Hidden until you add actual image */
+}
+
+.resume-placeholder {
+    text-align: center;
+    color: #7F5727;
+    font-family: "Inria Serif", serif;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.resume-placeholder p {
+    margin: 10px 0;
+}
+
+/* Show the image and hide placeholder when image is loaded */
+.resume-image-container:has(.resume-image[src]) .resume-placeholder {
+    display: none;
+}
+
+.resume-image-container:has(.resume-image[src]) .resume-image {
+    display: block;
+}
+
+.download-btn {
+    position: relative;
+    background-color: #45402A ;
+    border: none;
+    padding: 0;
+    width: 400px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+}
+
+.download-btn:hover {
+    background-color: #0d230d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 0, 0.4);
+}
+
+.download-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #C0A062;
+    font-family: "Inria Serif", serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Page Styles */
+.contact-section {
+    position: absolute;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center to flex-start */
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+/* Left Side - Name and Image */
+.name-section {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between name and image */
+}
+
+.main-name {
+    font-family: "Inria Serif", serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #7F5727;
+    margin: 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #7F5727;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    align-self: flex-start; /* Align image to the left */
+}
+
+/* Right Side - Contact Information */
+.contact-info {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #7F5727;
+    align-self: flex-start; /* Align to top */
+    margin-top: 0; /* Ensure it aligns with name */
+}
+
+.contact-title {
+    font-family: "Inria Serif", serif;
+    font-size: 28px;
+    color: #7F5727;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-label {
+    font-family: "Inria Serif", serif;
+    font-size: 18px;
+    color: #7F5727;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    font-family: "Inria Serif", serif;
+    font-size: 16px;
+    color: #ffffff;
+    word-break: break-all;
+}
+
+/* ===== MY WORK PAGE STYLES ===== */
+.work-section {
+    position: relative;
+    width: 1280px;
+    height: 800px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for top row */
+    grid-template-rows: 1fr 1.5fr; /* Long column for bottom row */
+    gap: 30px;
+    height: auto;
+    max-width: 1280px;
+    margin-top: 150px;
+    Margin-bottom: 100px;
+}
+
+/* Work Item Base Styles */
+.work-item {
+    background-color: #3B3F07;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid #7F5727;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Bottom item spans both columns */
+.work-item.bottom-full {
+    grid-column: 1 / -1; /* Span all columns */
+    grid-row: 2; /* Second row */
+}
+
+/* Work Image */
+.work-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #7F5727;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Larger image for bottom item */
+.work-item.bottom-full .work-image {
+    width: 300px;
+    height: 150px;
+}
+
+/* Work Content */
+.work-content {
+    flex: 1;
+    color: #ffffff;
+}
+
+.project-title {
+    font-family: "Inria Serif", serif;
+    font-size: 28px;
+    color: #7F5727;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    font-family: "Inria Serif", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Larger text for bottom item */
+.work-item.bottom-full .project-title {
+    font-size: 32px;
+}
+
+.work-item.bottom-full .project-description {
+    font-size: 18px;
+}
+
+/* Corner Positioning with Spacing */
+.top-left {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.top-right {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.bottom-full {
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+
